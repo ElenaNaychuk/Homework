@@ -1,4 +1,5 @@
 function showMessage() {
-    let age = prompt("Как тебя зовут?", 'имя')
-    alert(`Привет, ${age} !`)
+    let name = prompt("Как тебя зовут?", 'имя')
+    if(name===null) return
+    alert(`Привет, ${name} !`)
 }
