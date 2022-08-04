@@ -8,13 +8,21 @@
         <h1>JavaScript</h1>
         <h2>Практическое задание № 2</h2>
         <div>
-            <button onclick="add();">+</button>
-            <button onclick="subtract();">&minus;</button>
+            <input id="first-number" type="number" placeholder="Введите первое число">
+            <input id="second-number" type="number" placeholder="Введите второе число">
         </div>
         <div>
-            <button onclick="multiply();">&times;</button>
-            <button onclick="divide();">&divide;</button>
+            <button id="button1" onclick="add ();">+</button>
+            <button id="button2" onclick="subtract ();">&minus;</button>
         </div>
+        <div>
+            <button id="button3" onclick="multiply ();">&times;</button>
+            <button id="button4" onclick="divide ();">&divide;</button>
+        </div>
+        <p>Результат:</p>
+        <div id="result"></div>
+        <div class="color" onclick="clickMe (this);">Нажми на меня</div>
+
 
 
         <script src="assets/script.js"></script>

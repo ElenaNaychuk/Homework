@@ -1,27 +1,32 @@
 function add () {
-    const a = Number(prompt("Введите первое слагаемое:"));
-    const b = Number(prompt("Введите второе слагаемое:"));
+    const a = Number(document.getElementById('first-number').value);
+    const b = Number(document.getElementById('second-number').value);
     const sum = a + b;
-    alert(`Сумма: ${sum}.`);
+    document.getElementById('result').innerHTML = `Сумма: ${sum}.`;
 }
 
 function subtract () {
-    const a = Number(prompt("Введите уменьшаемое:"));
-    const b = Number(prompt("Введите вычитаемое:"));
+    const a = Number(document.getElementById('first-number').value);
+    const b = Number(document.getElementById('second-number').value);
     const difference = a - b;
-    alert(`Разность: ${difference}.`);
+    document.getElementById('result').innerHTML = `Разность: ${difference}.`;
 }
 
 function multiply () {
-    const a = Number(prompt("Введите первый множитель:"));
-    const b = Number(prompt("Ведите второй множитель:"));
+    const a = Number(document.getElementById('first-number').value);
+    const b = Number(document.getElementById('second-number').value);
     const product = a * b;
-    alert(`Произведение: ${product}.`);
+    document.getElementById('result').innerHTML = `Произведение: ${product}.`;
 }
 
-function divide() {
-    const a = Number(prompt("Введите делимое:"));
-    const b = Number(prompt("Введите делитель:"));
+function divide () {
+    const a = Number(document.getElementById('first-number').value);
+    const b = Number(document.getElementById('second-number').value);
     const quotient = a / b;
-    alert(`Частное: ${quotient}.`);
+    document.getElementById('result').innerHTML = `Частное: ${quotient}.`;
 }
+
+function clickMe (sender) {
+    sender.classList.toggle ("color-blue");
+}
+

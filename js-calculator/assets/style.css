@@ -1,4 +1,4 @@
-div, h1, h2 {
+div, h1, h2, p {
     margin-left: 5vw;
 }
 h1 {
@@ -10,4 +10,31 @@ button {
     margin-top: 5vh;
     font-size: xx-large;
     background-color: bisque;
+}
+
+input {
+    height: 5vh;
+    width: 15vw;
+}
+
+#result {
+    width: 31.5vw;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.color {
+    width: 31.5vw;
+    height: 20px;
+    background-color: bisque;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.color-blue {
+    background-color: rgb(180, 180, 243);
+}
+
+.calculator {
+    background-color: white;
 }
