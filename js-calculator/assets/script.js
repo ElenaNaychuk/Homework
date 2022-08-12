@@ -24,6 +24,11 @@ function divide () {
     const b = Number(document.getElementById('second-number').value);
     const quotient = a / b;
     document.getElementById('result').innerHTML = `Частное: ${quotient}.`;
+
+    if (b == 0) {
+        alert("Делить на 0 нельзя.");
+        document.getElementById('result').innerHTML = '';
+    }
 }
 
 function clickMe (sender) {
