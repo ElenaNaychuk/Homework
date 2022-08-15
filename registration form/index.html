@@ -13,15 +13,16 @@
             <div class="registration">
                 <p>Форма регистрации</p>
             </div>
-            <form class="registration-inputs">
+            <div class="registration-inputs">
                 <input id="login" type="text" placeholder="Введите логин">
                 <input id="email" type="text" placeholder="Введите Email">
                 <input id="name" type="text" placeholder="Имя">
                 <input id="password1" type="password" placeholder="Пароль">
                 <input id="password2" type="password" placeholder="Повторите пароль">
                 <div id="errorMessage"></div>
-                <button class="btn" onclick="check()">Отправить</button>
-            </form>
+                <button class="btn" onclick="validate()">Отправить</button>
+                <div id="message"></div>
+            </div>
         </div>
     </div>
 

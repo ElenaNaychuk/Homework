@@ -1,33 +1,38 @@
-function check() {
-    let login = document.getElementById("login");
-    let email = document.getElementById("email");
-    let name = document.getElementById("name");
-    let password1 = document.getElementById("password1");
-    let password2 = document.getElementById("password2");
+function validate() {
+    let loginInput = document.getElementById("login");
+    let emailInput = document.getElementById("email");
+    let nameInput = document.getElementById("name");
+    let password1Input = document.getElementById("password1");
+    let password2Input = document.getElementById("password2");
 
     document.getElementById("errorMessage").innerHTML = '';
+    document.getElementById("message").innerHTML = '';
 
-    if (login.value === '') {
-        document.getElementById("errorMessage").innerHTML += "Введите логин<br>";
+    if (loginInput.value === '') {
+        document.getElementById("errorMessage").innerHTML += 'Введите логин<br>';
     }
 
-    if (email.value === "") {
-        document.getElementById("errorMessage").innerHTML += "Введите email<br>";
+    if (emailInput.value === "") {
+        document.getElementById("errorMessage").innerHTML += 'Введите email<br>';
     }
 
-    if (name.value === '') {
-        document.getElementById("errorMessage").innerHTML += "Введите имя<br>";
+    if (nameInput.value === '') {
+        document.getElementById("errorMessage").innerHTML += 'Введите имя<br>';
     }
 
-    if (password1.value === '') {
-        document.getElementById("errorMessage").innerHTML += "Введите пароль<br>";
+    if (password1Input.value === '') {
+        document.getElementById("errorMessage").innerHTML += 'Введите пароль<br>';
     }
 
-    if (password2.value === '') {
-        document.getElementById("errorMessage").innerHTML += "Повторите пароль<br>";
+    if (password2Input.value === '') {
+        document.getElementById("errorMessage").innerHTML += 'Повторите пароль<br>';
     }
 
-    if (password1.value !== '' && password2.value !== '' && password2.value !== password1.value) {
-        document.getElementById("errorMessage").innerHTML += "Пароли не совпадают";
+    if (password1Input.value !== '' && password2Input.value !== '' && password2Input.value !== password1Input.value) {
+        document.getElementById("errorMessage").innerHTML += 'Пароли не совпадают<br>';
+    }
+
+    if (document.getElementById("errorMessage").innerHTML === '') {
+        document.getElementById("message").innerHTML += `Добро пожаловать, ${nameInput.value}!`
     }
 }
