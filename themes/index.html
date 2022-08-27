@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body class="darkArea">
-    <div class="container">
+
+<body>
+    <!-- блок Выбор темы -->
+    <div>
         <label for="chooseTheme">Выберите тему:</label>
         <select name="select" id="select">
             <option class="option-light" value="light">Светлая тема</option>
@@ -17,6 +20,68 @@
         </select>
     </div>
 
+    <!-- блок sumInput-->
+    <div class="container">
+        <h1>Массивы и циклы</h1>
+        <h4>Практическое задание № 1</h4>
+        <div class="message">Введите число</div>
+        <input class="input" type="text" placeholder="Введите число">
+        <button class="btn-ok btn">ОК</button>
+        <div class="numbers"></div>
+        <div>
+            <button class="sum btn">Готово</button>
+        </div>
+        <div class="result"></div>
+
+
+        <!-- Калькулятор расчёта стоимости автомобиля -->
+        <h4>Практическое задание № 2</h4>
+        <div class="calculatior">
+            <div class="calculatior-title">
+                <h3 class="title">Калькулятор расчёта стоимости автомобиля.</h3>
+            </div>
+            <div class="calculatior-form">
+                <p>Калькулятор помогает расчитать примерную стоимость автомобиля.</p>
+                <div class="select-container">
+                    <label for="">Возраст автомобиля:</label>
+                    <select class="input age" name="age-car">
+                        <option class="age-newCar">Выбрать:</option>
+                        <option class="age-newCar" value="new">Новый</option>
+                        <option class="age-under5" value="under5">Менее 5 лет</option>
+                        <option class="age-more5" value="more5">От 5 лет</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label for="">Выберите марку:</label>
+                    <select class="input brand" name="brand-car" disabled>
+                        <option class="age-newCar" value="">Выбрать:</option>
+                        <option class="lada" value="lada">Lada</option>
+                        <option class="chevrolet" value="chevrolet">Chevrolet</option>
+                        <option class="honda" value="honda">Honda</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label for="">Выберите модель:</label>
+                    <select class="input model" name="model-car" disabled>
+                        <option class="age-newCar" value="">Выбрать:</option>
+                    </select>
+                </div>
+                <label class="transmission">Выберите коробку передач:</label>
+                <input class="automatic-transmission" type="radio" checked="checked" name="transmission"
+                    value="automatic">
+                <label for="">Автомат</label>
+                <input class="mechanical-transmission" type="radio" name="transmission" value="mechanical">
+                <label for="">Механическая</label>
+            </div>
+            <div class="calculatior-button">
+                <button class="button btn">Рассчитать</button>
+            </div>
+            <div class="calculatior-result"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <!-- <script src="car-calculator.js"></script> -->
 </body>
+
 </html>

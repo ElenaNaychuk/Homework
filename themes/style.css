@@ -9,3 +9,83 @@
 .grayArea {
     background-color: lightgray;
 }
+
+.container {
+    margin: 100px;
+    margin-right: 0;
+}
+
+.input {
+    height: 20px;
+    margin-top: 10px;
+}
+
+.btn {
+    height: 25px;
+    border-radius: 5%;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.message {
+    color: green;
+}
+
+.numbers {
+    margin-top: 15px;
+}
+
+.sum {
+    margin-top: 20px;
+}
+.result {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Калькулятор рассчёта стоимсти автомобиля */
+
+.calculatior {
+    width: 90%;
+    border: 1px solid cadetblue;
+    border-top: none;
+    background-color: #e0f6f6;
+}
+
+.calculatior-title {
+    min-height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+}
+
+.calculatior-form {
+    padding: 20px;
+}
+
+.select-container {
+    margin: 20px 0;
+}
+
+.calculatior-button {
+    text-align: center;
+}
+
+.input {
+    width: 40%;
+}
+
+.button {
+    margin-bottom: 30px;
+}
+
+.calculatior-result {
+    text-align: center;
+    margin-bottom: 20px;
+}
