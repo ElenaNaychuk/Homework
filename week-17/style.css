@@ -1,0 +1,56 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    padding-left: 30px;
+}
+
+span {
+    color: red;
+}
+
+.container_name {
+    margin: 30px;
+}
+
+.btn {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(196, 243, 245);
+    border: 2px solid rgb(95, 159, 161);
+}
+
+/* Практическое задание 2*/
+
+.container {
+    min-height: 100px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.commentary {
+    width: 90%;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.commentary_btn {
+    margin: 0;
+}
+
+.number_btn {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
