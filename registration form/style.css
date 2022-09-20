@@ -32,6 +32,8 @@
 .registration-inputs {
     display: flex;
     flex-direction: column;
+    text-align: center;
+
     padding: 30px;
     gap: 10px;
 }
@@ -57,3 +59,33 @@
     color: green;
     text-align: center;
 }
+
+span {
+    color: red;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+
+.container_cat {
+    margin: 60px;
+}
+
+.names {
+    padding: 20px;
+}
+
+.name {
+    margin: 10px 0;
+}
+
+.item {
+    margin: 30px 0;
+}
+
+.btn_cat {
+    margin-left: 0;
+}
+

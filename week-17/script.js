@@ -48,23 +48,106 @@ function formattedData() {
 
 }
 
+
+
+
+
 /* Практическое задание 2 */
 
 const buttonSend = document.querySelector('.commentary_btn');
-buttonSend.addEventListener('click', checkSpam);
+buttonSend.addEventListener('click', addMessage);
 
-function checkSpam(str) {
-    let commentary = document.querySelector('.commentary').value;
-    let newCommentary = commentary.replace(/viagra/g, '***');
+document.addEventListener("DOMContentLoaded", function (event) {
+    const name = localStorage.getItem('name');
+    const avatar = localStorage.getItem('avatar');
 
-    let newTagOfDiv = document.querySelector('.new_commentary');
-    const newP = document.createElement('p')
-    newTagOfDiv.append(newP);
-    newP.innerHTML = newCommentary;
+    if (name !== null) {
+        document.querySelector('#author').value = name;
+    }
 
-    document.querySelector('.commentary').value = '';
+    if (avatar !== null) {
+        document.querySelector('.images').innerHTML = avatar;
+    }
 
+    let comments = readComments();
+    for (newCommentary of comments) {
+        addCommentToDom(newCommentary);
+    }
+});
+
+function addMessage() {
+    const comment = document.querySelector("#comment").value;
+    const name = document.querySelector('#author').value;
+    const newCommentary = checkSpam(comment);
+    const comments = readComments();
+    comments.push(newCommentary);
+    saveComments(comments);
+    addCommentToDom(newCommentary);
+
+    document.querySelector("#comment").value = '';
 }
+
+const inputName = document.querySelector('#author');
+inputName.addEventListener('change', saveName)
+
+function saveName() {
+    const firstName = document.querySelector('#author').value;
+    if (confirm('Хотите сохранить имя?')) {
+        localStorage.setItem('name', firstName);
+    }
+}
+
+const photoAvatar = document.querySelector('.btn_photo');
+photoAvatar.addEventListener('click', pickPhotoOfAvatar);
+
+function pickPhotoOfAvatar() {
+    if (confirm('Хотите добавить фото?')) {
+        addPhoto();
+    }
+    savePhotFromAvatar();
+}
+
+function savePhotFromAvatar() {
+    const photoImgAvatar = document.querySelector('.images').innerHTML;
+    if (confirm('Хотите сохранить фото?')) {
+        localStorage.setItem('avatar', photoImgAvatar);
+    }
+}
+
+function addPhoto() {
+    const newTagImgOfDiv = document.querySelector('.images');
+    const saveTagImage = document.createElement('img');
+    newTagImgOfDiv.append(saveTagImage);
+    saveTagImage.src = 'https://dachnikam.ru/wp-content/uploads/2018/02/romashki_1.jpg';
+}
+
+function addCommentToDom(newCommentary) {
+    const images = document.querySelector('.images').innerHTML;
+    const firstName = document.querySelector('#author').value;
+    const newTagOfDiv = document.querySelector('.new_commentary');
+    const saveTagParagraph = document.createElement('p');
+    newTagOfDiv.append(saveTagParagraph);
+    saveTagParagraph.innerHTML = `${images}<span class = "color_word">${firstName}:</span>${newCommentary}`;
+}
+
+function readComments() {
+    const raw = localStorage.getItem('comments');
+    return raw ? JSON.parse(raw) : [];
+}
+
+function saveComments(comments) {
+    const lastCommentsCountToShow = 5;
+    localStorage.setItem('comments', JSON.stringify(comments.slice(-1 * lastCommentsCountToShow)));
+}
+
+function checkSpam(comment) {
+    return comment.replace(/viagra/g, '***');
+}
+
+
+
+
+
 
 /* Практическое задание 3 */
 
@@ -82,6 +165,7 @@ function formatDate(date) {
         return date.toLocaleString()
     }
 }
+
 
 /* Практическое задание 4 */
 const numberBtn = document.querySelector('.number_btn');
