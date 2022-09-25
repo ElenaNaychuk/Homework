@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Опросник для владельцев котиков */
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container_cat {
+    margin: 60px;
+}
+
+.names {
+    padding: 20px;
+}
+
+.name {
+    margin: 10px 0;
+}
+
+.item {
+    margin: 30px 0;
+}
+
+.btn {
+    background-color: rgb(160, 222, 224);
+    border: 1px solid blue;
+    border-radius: 3%;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.comment {
+    padding: 10px;
+}
+
+/* Калькулятор */
+
+.container_calculator {
+    margin-left: 50px;
+}
+
+.js-button-calk {
+    width: 8vw;
+    height: 7vh;
+    margin-top: 5vh;
+    font-size: xx-large;
+    background-color: #fcd1b5;;
+    cursor: pointer;
+}
+
+.js-button-calk:hover {
+    background-color: #f7b58a;
+}
+
+.inputs {
+    height: 5vh;
+    width: 20vw;
+}
+
+.container_radiobutton {
+    margin-top: 20px;
+}
+
+#result {
+    width: 50%;
+    height: 20px;
+    border: 1px solid black;
+}
+
+#result {
+    margin-bottom: 30px;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.js-calculator {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+/* Практическое задание № 4*/
+
+.container_form {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.input-form {
+    margin-bottom: 20px;
+}
+
+.js-button-form {
+    margin-top: 20px;
+}

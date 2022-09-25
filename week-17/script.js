@@ -18,7 +18,7 @@ function formattedData() {
         let name2 = name.trim();
         let newName = name2.toLowerCase();
         let newName2 = newName.charAt(0).toUpperCase() + newName.slice(1);
-        document.querySelector('.name').value = newName2;
+        name = newName2;
     }
 
 
@@ -32,7 +32,7 @@ function formattedData() {
         let surname2 = surname.trim();
         let newSurname = surname2.toLowerCase();
         let newSurname2 = newSurname.charAt(0).toUpperCase() + newSurname.slice(1);
-        document.querySelector('.surname').value = newSurname2;
+        surname = newSurname2;
     }
 
 
@@ -43,7 +43,7 @@ function formattedData() {
         let patronymic2 = patronymic.trim();
         const pnewPatronymic = patronymic2.toLowerCase();
         const newPatronymic2 = pnewPatronymic.charAt(0).toUpperCase() + pnewPatronymic.slice(1);
-        document.querySelector('.patronymic').value = newPatronymic2;
+        patronymic = newPatronymic2;
     }
 
 }
@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 function addMessage() {
     const comment = document.querySelector("#comment").value;
-    const name = document.querySelector('#author').value;
     const newCommentary = checkSpam(comment);
     const comments = readComments();
     comments.push(newCommentary);

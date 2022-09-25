@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Объектно-ориентированное программирование</h1>
+
+    <!-- Практическое задание № 2 -->
+
+    <div class="container_cat">
+        <h2>Опросник для владельцев котиков.</h2>
+        <div>
+            <fieldset class="names">
+                <legend>Данные о котике и его владельце:</legend>
+                <div class="name">
+                    <label for="nameCat">Кличка питомца:</label>
+                    <input type="text" id="nameCat" placeholder="Кличка питомца" required />
+                </div>
+                <div class="name">
+                    <label for="nameCat">Возраст питомца:</label>
+                    <input type="number" id="ageCat" name="growth" max="20" placeholder="Возраст" required />
+                </div>
+                <div class="name">
+                    <label for="name">Имя владельца: </label>
+                    <input type="text" id="name-host" placeholder="Имя владельца" required />
+                </div>
+            </fieldset>
+            <div class="name_cat item">
+                <h3>Выберите породу из списка</h3>
+                <select class="breedCat">
+                    <option>Персидская кошка</option>
+                    <option>Мейн-кун</option>
+                    <option>Британская кошка</option>
+                    <option>Бенгальская кошка</option>
+                    <option>Сфинкс</option>
+                </select>
+            </div>
+            <div>
+                <h3>Укажите пол вашего питомца</h3><br />
+                <div>
+                    <input type="radio" name="gender" value="female" /> Самка
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="male" /> Самец
+                </div>
+            </div>
+            <section class="nutrition item">
+                <h3>Чем питается?</h3>
+                <div>
+                    <input class="check" type="checkbox" name="Cухой корм">Cухой корм
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="Консервированный корм">Консервированный корм
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="Натуральный корм">Натуральный корм
+                </div>
+            </section>
+            <div>
+                <h4>Комментарий владельца:</h4>
+                <textarea class="comment" rows="5" cols="45"></textarea>
+            </div>
+            <div>
+                <button class="btn js-btn_cat">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Практическое задание № 3 -->
+    <div class="container_calculator">
+        <h2>Калькулятор</h2>
+        <div>
+            <input class="inputs" id="first-number" type="number" placeholder="Введите первое число">
+            <input class="inputs" id="second-number" type="number" placeholder="Введите второе число">
+        </div>
+        <div>
+            <button class="js-button-calk" id="sum">+</button>
+            <button class="js-button-calk" id="subtract">&minus;</button>
+        </div>
+        <div>
+            <button class="js-button-calk" id="multiply">&times;</button>
+            <button class="js-button-calk" id="divide">&divide;</button>
+        </div>
+        <p class="text">Результат:</p>
+        <div id="result"></div>
+    </div>
+
+    <!-- Практическое задание № 4 -->
+    <div class="container_form">
+        <h2>Валидация формы</h2>
+        <div class="div-form">
+            <div>
+                <input class="input-form" id="email" type="" placeholder="Email">
+            </div>
+            <div>
+                <input class="input-form" id="phone" type="" placeholder="Телефон">
+            </div>
+            <div>
+                <input class="input-form" id="date" type="" placeholder="Дата">
+            </div>
+            <div>
+                <input class="input-form" id="address_domain" type="" placeholder="Адрес домена">
+            </div>
+
+            <button class="js-button-form btn">Проверить</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
