@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JSON, API</h1>
+    <h3>Практическое задание №1</h3>
+    <div class="container_marvel">
+        <h2>Супергерои Марвелл</h2>
+        <div class="container_cards">
+            <!-- шаблон карточки героя -->
+            <div class="card-none">
+                <div class="card_hero">
+                    <img class="image" src="" alt="photo">
+                    <h4 class="title"></h4>
+                    <p class="universe"></p>
+                    <p class="occupation"></p>
+                    <p class="superPower"></p>
+                    <p class="detailedDescription"></p>
+                    <legend class="rating_container">
+                        <input class="rating" type="radio" name="raiting" value="5">
+                        <input class="rating" type="radio" name="raiting" value="4">
+                        <input class="rating" type="radio" name="raiting" value="3">
+                        <input class="rating" type="radio" name="raiting" value="2">
+                        <input class="rating" type="radio" name="raiting" value="1">
+                        <p class="rating_text">Рейтинг:</p>
+                    </legend>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <h3>Практическое задание № 2</h3>
+    <div class="container-quiz">
+        <div class="container-colour">
+            <h2 class="title-quis">Викторина</h2>
+            <p class="text">Любите искать ответы на интересные вопросы? Если да, то предлагаем вам поиграть в нашу
+                викторину!</p>
+            <div>
+                <button class="js-button-start-quiz btn" id="js-button-start">Start</button>
+            </div>
+            <div class="question"></div>
+            <div>
+                <textarea name="" id="text-avswer" placeholder="Write your answer"></textarea>
+                <div class="container-btn">
+                    <button class="js-btn-help btn-small">Help</button>
+                </div>
+            </div>
+            <div class="message"></div>
+            <div class="category">
+                <button class="js-btn-answer btn-small-next_question  btn">Answer</button>
+                <button class="js-button-start-quiz btn-small" id="js-button-next-question">Next question</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
