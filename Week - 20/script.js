@@ -34,9 +34,13 @@ function fillCard(card, superhero) {
     card.querySelector('.occupation').innerHTML = `<span class="names">Деятельность: </span>${superhero.occupation}`;
     card.querySelector('.superPower').innerHTML = `<span class="names">Суперсила: </span>${superhero.superPower}`;
     card.querySelector('.detailedDescription').innerHTML = `<span class="names">Подробнее: </span> ${superhero.detailedDescription}`;
+    const rating = Number(localStorage.getItem(`rating-${cardName}`));
     card.querySelectorAll('.rating').forEach(radio => {
         radio.name = cardName;
         radio.addEventListener('change', saveRatingInLocalStorage);
+        if (rating === Number(radio.value)) {
+            radio.checked = true;
+        }
     });
 }
 
