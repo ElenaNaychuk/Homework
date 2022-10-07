@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+}
+
+h1,
+h3 {
+    margin-top: 20px;
+}
+
+.container-input-search {
+    margin: 30px;
+    padding: 20px;
+    background-color: #ededed;
+
+}
+
+img {
+    margin: 10px;
+}
+
+.searchBtn {
+    cursor: pointer;
+}
+
+.gif {
+    margin-top: 30px;
+}
+
+.container {
+    width: 90%;
+    height: 100vh;
+    padding-top: 50px;
+    margin: 0 auto;
+    background-color: #ededed;
+}
+
+.registration-form {
+    width: 40%;
+    height: auto;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 2%;
+}
+
+.registration {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 2%;
+    font-weight: 600;
+    background-color: #7266f5;
+    color: white;
+}
+
+.registration-inputs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 10px;
+    gap: 10px;
+}
+
+.btn {
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 2%;
+    background-color: #7266f5;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #5e54cc;
+    border: 1px solid #7266f5;
+}
+
+#errorMessage {
+    color: red;
+    text-align: center;
+}
+
+#message {
+    color: green;
+    text-align: center;
+}
+
+span {
+    color: red;
+}
+
+/* Опросник для котиков */
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container_cat {
+    background-color: #ededed;
+    padding: 20px;
+    margin: 30px;
+}
+
+.names {
+    padding: 20px;
+}
+
+.name {
+    margin: 10px 0;
+}
+
+.item {
+    margin: 30px 0;
+}
+
+.comment {
+    padding: 10px;
+}
