@@ -20,13 +20,13 @@ function createElementDom() {
     return saveTagImage;
 }
 
+function addImageSrc(gifObject, saveTagImage) {
+    saveTagImage.src = gifObject.images.fixed_height.url;
+}
+
 function addImageDom(saveTagImage) {
     const newImage = document.querySelector('.gif');
     newImage.append(saveTagImage);
-}
-
-function addImageSrc(gifObject, saveTagImage) {
-    saveTagImage.src = gifObject.images.fixed_height.url;
 }
 
 const cleanDivWithImages = () => document.querySelector('.gif').innerHTML = '';
@@ -193,3 +193,5 @@ sendDataCatBtn.onclick = function (event) {
 //     const results = await api.find(query);
 //     gui.showResults(results);
 // });
+
+
