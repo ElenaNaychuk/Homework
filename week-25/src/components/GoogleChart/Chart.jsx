@@ -1,19 +1,19 @@
 import { Chart } from "react-google-charts"
 
-export const data = [
+const data = [
     ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
+    ["Учёба", 8],
+    ["Приготовление еды", 2.2],
+    ["Общение с близкими", 2],
+    ["Спорт", 1.5],
+    ["Отдых", 2],
 ];
 
-export const options = {
-    title: "My Daily Activities",
+const options = {
+    title: "Mоя активность днём",
 };
 
-export default function Chart2() {
+export default function PieChart() {
     return (
         <>
             <Chart

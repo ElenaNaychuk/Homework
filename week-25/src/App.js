@@ -1,10 +1,10 @@
-import Chart2 from './components/Chart/Chart2'
+import PieChart from './components/GoogleChart/Chart'
 import './style/App.css';
 
 function App() {
   return (
     <div className="App">
-      <Chart2 />
+      <PieChart />
     </div>
   );
 }
