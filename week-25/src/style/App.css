@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container_marvel {
+    background-color: #ecf3f3;
+    padding: 30px;
+}
+
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+    gap: 30px;
+    height: auto;
+    padding: 30px;
+}
+
+.card_hero {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr auto;
+    width: 350px;
+    height: 450px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #c10f0f;
+}
+
+.names {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.image {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 3px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 1px solid #ad1313;
+}
+
+.universe {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.occupation {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.superPower {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.detailedDescription {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    font-size: 0.9rem;
+}
+
+.rating_container {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.rating {
+    appearance: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 2px solid #ad1313;
+}
+
+.rating:checked,
+.rating:checked~.rating {
+    border: 8px solid #ad1313;
+}
+
+.rating_text {
+    grid-row: 4/5;
+}
