@@ -1,0 +1,116 @@
+$color-white: rgb(251 253 254);
+
+.tariff_card {
+    text-align: center;
+    width: 170px;
+    height: 230px;
+
+    .title {
+        height: 35px;
+        padding-top: 10px;
+        border: 1px solid $color-white;
+        color: $color-white;
+        background-color: aquamarine;
+    }
+
+    .price {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: space-around;
+        height: 90px;
+        color: $color-white;
+        background-color: aquamarine;
+        border: 1px solid $color-white;
+
+        .price_currency {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            font-size: small;
+        }
+
+        .price_cost {
+            grid-row: 2/5;
+            grid-column: 3/4;
+            font-size: xx-large;
+        }
+
+        .month {
+            grid-row: 3/5;
+            grid-column: 4/5;
+            font-size: small;
+        }
+    }
+
+    .speed {
+        height: 35px;
+        padding-top: 10px;
+        background-color: rgb(244 244 244);
+        border: 1px solid $color-white;
+        color: rgb(132 132 132);
+    }
+
+    .text {
+        height: auto;
+        padding: 8px;
+        background-color: rgb(237 237 237);
+        font-size: small;
+        color: rgb(132 132 132);
+        border: 1px solid $color-white;
+    }
+}
+
+.main_card {
+    width: 190px;
+    height: 260px;
+
+    .title {
+        height: 40px;
+        padding-top: 15px;
+    }
+
+    .price {
+        height: 105px;
+    }
+}
+
+.color_blue {
+    .title {
+        background-color: rgb(33 156 170);
+    }
+
+    .price {
+        background-color: rgb(44 193 213);
+    }
+}
+
+.color_green {
+    .title {
+        background-color: rgb(29 139 114);
+    }
+
+    .price {
+        background-color: rgb(36 174 141);
+    }
+}
+
+.color_red {
+    .title {
+        background-color: rgb(196 85 78);
+    }
+
+    .price {
+        background-color: rgb(244 106 95);
+    }
+}
+
+.color_black {
+    .title {
+        background-color: rgb(40 45 56);
+    }
+
+    .price {
+        background-color: rgb(51 58 68);
+    }
+}
