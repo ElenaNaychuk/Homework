@@ -6,17 +6,9 @@ function TariffCard(props) {
         style.tariff_card,
         {
             [style.main_card]: props.cardSize,
-        },
-        {
             [style.color_blue]: props.colorBlue,
-        },
-        {
             [style.color_green]: props.colorGreen,
-        },
-        {
             [style.color_red]: props.colorRed,
-        },
-        {
             [style.color_black]: props.colorBlack,
         },
     );

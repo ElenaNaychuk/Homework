@@ -6,11 +6,10 @@ $color-white: rgb(251 253 254);
     height: 230px;
 
     .title {
-        height: 35px;
-        padding-top: 10px;
+        height: 40px;
+        line-height: 40px;
         border: 1px solid $color-white;
         color: $color-white;
-        background-color: aquamarine;
     }
 
     .price {
@@ -21,7 +20,6 @@ $color-white: rgb(251 253 254);
         justify-content: space-around;
         height: 90px;
         color: $color-white;
-        background-color: aquamarine;
         border: 1px solid $color-white;
 
         .price_currency {
@@ -64,14 +62,15 @@ $color-white: rgb(251 253 254);
 .main_card {
     width: 190px;
     height: 260px;
+    box-shadow: 0.3em 0.3em 2em rgba(0, 0, 0, 0.3);
 
     .title {
-        height: 40px;
-        padding-top: 15px;
+        height: 50px;
+        line-height: 50px;
     }
 
     .price {
-        height: 105px;
+        height: 110px;
     }
 }
 
