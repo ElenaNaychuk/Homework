@@ -1,0 +1,29 @@
+.block_navigation {
+    width: 100px;
+    min-height: 8vh;
+    line-height: 8vh;
+    color: #FFF;
+    border: 2px solid #FFF;
+    background-color: #08b865;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.block_navigation:hover {
+    cursor: pointer;
+    background-color: #FFF;
+    border: 1px solid #ff883a;
+    color: #ff883a;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 14vh;
+    background-color: #08b865;
+}
