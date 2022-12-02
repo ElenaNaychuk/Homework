@@ -6,7 +6,7 @@ $color-white: rgb(251 253 254);
     height: 230px;
 
     .title {
-        height: 40px;
+        min-height: 40px;
         line-height: 40px;
         border: 1px solid $color-white;
         color: $color-white;
@@ -59,19 +59,13 @@ $color-white: rgb(251 253 254);
     }
 }
 
+.tariff_card:hover {
+    cursor: pointer;
+}
+
 .main_card {
-    width: 190px;
-    height: 260px;
+    transform: scale(1.1, 1.1);
     box-shadow: 0.3em 0.3em 2em rgba(0, 0, 0, 0.3);
-
-    .title {
-        height: 50px;
-        line-height: 50px;
-    }
-
-    .price {
-        height: 110px;
-    }
 }
 
 .color_blue {

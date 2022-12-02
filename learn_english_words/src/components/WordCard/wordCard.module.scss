@@ -1,10 +1,11 @@
 $color-green: #04a904;
 $color-dark_green: #025302;
+$color: #08b865;
 
 .container_card {
     text-align: center;
-    width: 40vw;
-    height: 40vh;
+    width: 12em;
+    height: 9em;
     border: 2px solid $color-green;
     border-radius: 10px;
     font-size: x-large;
@@ -12,32 +13,35 @@ $color-dark_green: #025302;
     .wordEnglish {
         font-size: xx-large;
         font-weight: 700;
-        margin: 8px 0;
+        margin: 25px 0 10px;
+        color: $color;
     }
 
     .wordRussian {
+        display: none;
         font-weight: 500;
-    }
-
-    .word_group {
-        font-size: large;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
+        color: $color;
+        margin-top: 30px;
     }
 
     .button {
         width: 13vw;
         height: 5vh;
         border: 1px solid $color-dark_green;
-        background-color: #81ff81;
-        color: rgb(3, 5, 5);
+        background-color: $color;
+        color: #FFF;
         border-radius: 5px;
         border: none;
         font-size: 1rem;
+        margin-top: 40px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .show {
+        display: block;
     }
 
     .button:hover {

@@ -1,6 +1,6 @@
 .button {
-    width: 180px;
-    height: 5vh;
+    width: 10em;
+    height: 2em;
     background-color: #08b865;
     color: white;
     font-size: medium;
@@ -11,7 +11,9 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: #ff883a;
+    background-color: #feac4c;
+    transform: scale(1.01, 1.01);
+    box-shadow: 0.05em 0.05em 0.5em #08b865;
 }
 
 .text {
