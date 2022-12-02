@@ -1,6 +1,5 @@
 import style from './tariffCard.module.scss';
 import * as classnames from 'classnames';
-import { useState } from 'react';
 
 function TariffCard(props) {
     const className = classnames(
@@ -12,7 +11,6 @@ function TariffCard(props) {
             [style.color_black]: props.colorBlack,
         },
     );
-    // const [clicked, setClick] = useState(props.clicked || false)
     const handleClick = () => {
         props.toggleState();
     };

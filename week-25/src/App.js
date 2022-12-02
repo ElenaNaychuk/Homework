@@ -12,24 +12,10 @@ import './style/App.css';
 
 function App() {
 
-  const [tariffCardsStates, setTariffCardsStates] = useState([false, false, false, false])
-  const [testState, setTestState] = useState(false);
-  console.log(tariffCardsStates);
-  function setActiveTariffCard(tariffCardId) {
-    const copyData = tariffCardsStates.map((item, index) => index === tariffCardId);
-    /* {
-      if (index === tariffCardId) {
-        return !item;
-      }
-      return item;
-    } */
-    setTariffCardsStates(copyData);
-  }
+  const [activeTariffCardId, setActiveTariffCardId] = useState(undefined)
 
   return (
     <>
-      <button onClick={() => setTestState(!testState)} >toggle test</button>
-      <div>{'' + testState}</div>
       <PieChart />;
       <div className='App'>
         {
@@ -47,21 +33,20 @@ function App() {
       </div>
       <div className='container_tariff-cards'>
         {
-          tariffDatas.map((tariffData, index) =>
+          tariffDatas.map((tariffData) =>
             <TariffCard
+              id={tariffData.id}
+              toggleState={() => setActiveTariffCardId(tariffData.id)}
+              isActive={activeTariffCardId === tariffData.id}
+
               tariff={tariffData.tariff}
               monthlyPrice={tariffData.monthlyPrice}
               internetSpeed={tariffData.internetSpeed}
               text={tariffData.text}
-              // cardSize={tariffData.cardSize}
               colorBlue={tariffData.colorBlue}
               colorGreen={tariffData.colorGreen}
               colorRed={tariffData.colorRed}
               colorBlack={tariffData.colorBlack}
-              id={tariffData.id}
-              toggleState={() => setActiveTariffCard(tariffData.id)}
-              // onClick={() => { console.log('clicked'); setActiveTariffCard(tariffData.id) }}
-              isActive={tariffCardsStates[tariffData.id]}
             />
           )
         }
