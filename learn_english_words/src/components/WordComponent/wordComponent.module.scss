@@ -37,6 +37,7 @@
 }
 
 .btn_save {
+    display: none;
     background-color: #08b865;
 }
 
@@ -44,6 +45,23 @@
     background-color: #feac4c;
 }
 
+.hidden_btn_edit {
+    display: none;
+}
+
+.remove_edit_btn {
+    display: none;
+    background-color: #feac4c;
+}
+
+.show_remove_edit_btn {
+    display: block;
+}
+
 .btn_remove {
     background-color: #fa7a7b;
+}
+
+.add_btn_save {
+    display: block;
 }

@@ -15,8 +15,6 @@ function TariffCard(props) {
         props.toggleState();
     };
     const newClass = props.isActive ? style.main_card : '';
-    console.log(props.isActive);
-    console.log(style);
     return (
         <div onClick={handleClick} className={`${className} ${newClass}`} id={props.id}>
             <div className={style.title}>Безлимитный {props.tariff}</div>

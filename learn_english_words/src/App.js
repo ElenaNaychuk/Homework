@@ -3,8 +3,9 @@ import Header from './components/Header/Header.jsx';
 import MainPage from './components/MainPage/MainPage.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import './style/App.scss';
-import WordsList from './components/WordList/WordList.jsx';
-import { words } from './components/WordList/wodsListData.js';
+import WordComponent from './components/WordComponent/WordComponent.jsx';
+import { words } from './components/WordComponent/wordsData.js';
+
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <div className='container_words_list'>
         {
           words.map((word, index) =>
-            <WordsList
+            <WordComponent
               english={word.english}
               transcription={word.transcription}
               russian={word.russian}
