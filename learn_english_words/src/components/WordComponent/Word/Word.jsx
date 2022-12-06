@@ -8,7 +8,7 @@ function Word(props) {
     }
     else {
         return (
-            <div className={`${style.wrapper}`}>{props.content}</div>
+            <div className={style.wrapper}>{props.content}</div>
         )
     }
 }

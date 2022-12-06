@@ -25,19 +25,7 @@
     }
 }
 
-.btn {
-    border: none;
-    width: 30px;
-    height: 28px;
-}
-
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 0.05em 0.05em 0.5em #08b865;
-}
-
 .btn_save {
-    display: none;
     background-color: #08b865;
 }
 
@@ -45,23 +33,10 @@
     background-color: #feac4c;
 }
 
-.hidden_btn_edit {
-    display: none;
-}
-
-.remove_edit_btn {
-    display: none;
+.cancel_edit_btn {
     background-color: #feac4c;
 }
 
-.show_remove_edit_btn {
-    display: block;
-}
-
-.btn_remove {
+.btn_delete {
     background-color: #fa7a7b;
-}
-
-.add_btn_save {
-    display: block;
 }
