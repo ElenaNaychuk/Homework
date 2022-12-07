@@ -6,12 +6,10 @@ import { useState } from 'react';
 import Button from '../WordComponent/Button/Button';
 
 function CardGallery({ words, ...props }) {
-    const [clicked, setClick] = useState(props.clicked || false);
-    const handelClick = () => {
-        setClick(true);
-    }
 
     const [cardIndex, setCardIndex] = useState(0);
+    let hideTranslation;
+
     const showPreviousCard = () => {
         // if (cardIndex === 0) {
         //     setIndexCard(words.length - 1)
@@ -20,7 +18,7 @@ function CardGallery({ words, ...props }) {
         // }
         // setClick(false);
         setCardIndex(cyclicDecrement(cardIndex, words.length - 1))
-        setClick(false);
+        hideTranslation();
     }
 
     // const showNextCard = (words) => {
@@ -32,9 +30,9 @@ function CardGallery({ words, ...props }) {
     // setClick(false);
     // }
 
-    const showNextCard = (words) => {
+    const showNextCard = () => {
         setCardIndex(cyclicIncrement(cardIndex, words.length - 1));
-        setClick(false);
+        hideTranslation();
     }
 
     return (
@@ -46,12 +44,11 @@ function CardGallery({ words, ...props }) {
                     src='./assets/images/icons8-двойная-стрелка-влево-50.png'
                 />
                 <WordCard
-                    handelClick={handelClick}
                     english={words[cardIndex].english}
                     transcription={words[cardIndex].transcription}
                     id={words[cardIndex].id}
                     russian={words[cardIndex].russian}
-                    clicked={clicked}
+                    hideTranslationFuncReceiver={fn => { hideTranslation = fn }}
                 />
                 <Button
                     function={showNextCard}
