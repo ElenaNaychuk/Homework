@@ -11,22 +11,29 @@ function CardGallery({ words, ...props }) {
         setClick(true);
     }
 
-    const [cardIndex, setIndexCard] = useState(0);
+    const [cardIndex, setCardIndex] = useState(0);
     const showPreviousCard = () => {
-        if (cardIndex === 0) {
-            setIndexCard(words.length - 1)
-        } else {
-            setIndexCard(cardIndex - 1)
-        }
+        // if (cardIndex === 0) {
+        //     setIndexCard(words.length - 1)
+        // } else {
+        //     setIndexCard(cardIndex - 1)
+        // }
+        // setClick(false);
+        setCardIndex(cyclicDecrement(cardIndex, words.length - 1))
         setClick(false);
     }
 
+    // const showNextCard = (words) => {
+    // if (cardIndex === words.length - 1) {
+    //     setIndexCard(0)
+    // } else {
+    //     setIndexCard(cardIndex + 1)
+    // }
+    // setClick(false);
+    // }
+
     const showNextCard = (words) => {
-        if (cardIndex === words.length - 1) {
-            setIndexCard(0)
-        } else {
-            setIndexCard(cardIndex + 1)
-        }
+        setCardIndex(cyclicIncrement(cardIndex, words.length - 1));
         setClick(false);
     }
 
@@ -58,3 +65,16 @@ function CardGallery({ words, ...props }) {
 }
 
 export default CardGallery;
+
+function cyclicDecrement(current, max) {
+    if (current === 0) {
+        return max;
+    }
+    return current - 1;
+}
+function cyclicIncrement(current, max) {
+    if (current === max) {
+        return 0;
+    }
+    return current + 1;
+}
