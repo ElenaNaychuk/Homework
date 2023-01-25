@@ -23,9 +23,11 @@ function Chat() {
     }
 
     const addComment = () => {
-        const userComment = checkSpam(comment);
-        setComments([userComment, ...comments]);
-        setComment('');
+        if (comment != '') {
+            const userComment = checkSpam(comment);
+            setComments([userComment, ...comments]);
+            setComment('');
+        }
     }
 
     return (
