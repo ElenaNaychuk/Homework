@@ -23,7 +23,7 @@ function Chat() {
     }
 
     const addComment = () => {
-        if (comment != '') {
+        if (comment.trim() != '') {
             const userComment = checkSpam(comment);
             setComments([userComment, ...comments]);
             setComment('');
