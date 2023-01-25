@@ -1,0 +1,14 @@
+.comment {
+    min-height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    background-color: #eeeeee;
+    border: 1px solid #b584c3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.comment:first-child {
+    box-shadow: 5px 5px 5px #724e7c;
+}

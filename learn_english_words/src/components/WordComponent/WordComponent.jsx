@@ -1,6 +1,8 @@
+import { useState } from 'react';
+
 import Word from './Word/Word.jsx';
 import Button from './Button/Button';
-import { useState } from 'react'
+
 import style from './wordComponent.module.scss';
 
 function WordComponent(props) {
@@ -16,7 +18,7 @@ function WordComponent(props) {
         }
     }
     return (
-        <div className={style.conainer} id={props.id}>
+        <div className={style.conainer} key={props.id}>
             <Word content={props.english} isEditing={isEditing} />
             <Word content={props.transcription} isEditing={isEditing} />
             <Word content={props.russian} isEditing={isEditing} />

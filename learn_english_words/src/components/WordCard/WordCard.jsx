@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import style from './wordCard.module.scss'
 
 function WordCard(props) {
 
     return (
-        <div className={style.container_card} id={props.id}>
+        <div className={style.container_card} id={props.key}>
             <div className={style.wordEnglish}>{props.english}</div>
             <div className={style.transcript}>{props.transcription}</div>
             <div className={style.buttons}>
@@ -16,6 +15,13 @@ function WordCard(props) {
             </div>
         </div>
     );
+}
+
+WordCard.defaultProps = {
+    english: 'dog',
+    transcription: '[dog]',
+    russian: 'собака',
+    key: '0'
 }
 
 export default WordCard;

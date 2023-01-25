@@ -1,38 +1,24 @@
-import style from './cardGallery.module.scss';
-// import leftBtnImg from './assets/images/icons8-двойная-стрелка-влево-50.png'
-// import rightBtnImg from './assets/images/icons8-двойная-стрелка-вправо-50.png'
-import WordCard from '../WordCard/WordCard.jsx';
 import { useState } from 'react';
+
+import WordCard from '../WordCard/WordCard.jsx';
 import Button from '../WordComponent/Button/Button';
 
-function CardGallery({ words, ...props }) {
-    const [clicked, setClick] = useState(props.clicked || false);
+import style from './cardGallery.module.scss';
+
+function CardGallery({ words }) {
+    const [clicked, setClick] = useState(false);
+    const [cardIndex, setCardIndex] = useState(0);
+
     const handelClick = () => {
         setClick(true);
     }
 
-    const [cardIndex, setCardIndex] = useState(0);
     const showPreviousCard = () => {
-        // if (cardIndex === 0) {
-        //     setIndexCard(words.length - 1)
-        // } else {
-        //     setIndexCard(cardIndex - 1)
-        // }
-        // setClick(false);
         setCardIndex(cyclicDecrement(cardIndex, words.length - 1))
         setClick(false);
     }
 
-    // const showNextCard = (words) => {
-    // if (cardIndex === words.length - 1) {
-    //     setIndexCard(0)
-    // } else {
-    //     setIndexCard(cardIndex + 1)
-    // }
-    // setClick(false);
-    // }
-
-    const showNextCard = (words) => {
+    const showNextCard = () => {
         setCardIndex(cyclicIncrement(cardIndex, words.length - 1));
         setClick(false);
     }

@@ -1,0 +1,39 @@
+h4 {
+    margin: 40px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.chat__container {
+    min-height: 100px;
+    margin: 0 40px 50px;
+    padding: 40px;
+    border: 2px solid gray;
+
+    .chat__inputComment {
+        width: 97%;
+        height: 100px;
+        border: 1px solid #724e7c;
+        padding: 10px;
+    }
+
+    .chat__text {
+        margin-top: 30px;
+    }
+
+    .chat__btn {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        background-color: #b584c3;
+        color: #fff;
+        margin-top: 10px;
+    }
+}

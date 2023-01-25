@@ -10,7 +10,7 @@ function WordList(props) {
                         transcription={word.transcription}
                         russian={word.russian}
                         tag={word.tags}
-                        id={word.id}
+                        key={word.id}
                     />
                 )
             }

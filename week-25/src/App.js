@@ -6,6 +6,7 @@ import { superheroes } from './components/SuperHeroCard/superherosData';
 import TariffCard from './components/TariffCard/TariffCard';
 import { tariffDatas } from './components/TariffCard/TariffCardData';
 import { useState } from 'react';
+import Chat from './components/Chat/Chat';
 
 import './style/App.css';
 
@@ -16,10 +17,11 @@ function App() {
 
   return (
     <>
+      <Chat />
       <PieChart />;
       <div className='App'>
         {
-          superheroes.map((superheroe) =>
+          superheroes.map((superheroe, index) =>
             <SuperheroCard
               name={superheroe.name}
               universe={superheroe.universe}
@@ -27,6 +29,7 @@ function App() {
               superPower={superheroe.superPower}
               url={superheroe.url}
               detailedDescription={superheroe.detailedDescription}
+              key={index}
             />
           )
         }
@@ -47,6 +50,7 @@ function App() {
               colorGreen={tariffData.colorGreen}
               colorRed={tariffData.colorRed}
               colorBlack={tariffData.colorBlack}
+              key={tariffData.id}
             />
           )
         }
